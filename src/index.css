@@ -1,0 +1,246 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-outfit: "Outfit", sans-serif;
+  --breakpoint-2xsm: 375px;
+  --breakpoint-xsm: 425px;
+  --breakpoint-3xl: 2000px;
+
+  --color-white: oklch(100% 0 0);
+  --color-black: oklch(21.49% 0.011 262.23);
+  --color-current: currentColor;
+  --color-transparent: transparent;
+
+  --color-blue-light-25: oklch(97.54% 0.009 232.41);
+  --color-blue-light-50: oklch(95.74% 0.027 232.5);
+  --color-blue-light-100: oklch(92.04% 0.064 232.8);
+  --color-blue-light-200: oklch(86.57% 0.122 232.5);
+  --color-blue-light-300: oklch(77.2% 0.189 232.6);
+  --color-blue-light-400: oklch(68.21% 0.233 232.3);
+  --color-blue-light-500: oklch(61.02% 0.245 232.2);
+  --color-blue-light-600: oklch(52.65% 0.234 232.2);
+  --color-blue-light-700: oklch(44.31% 0.187 232.5);
+  --color-blue-light-800: oklch(37.38% 0.148 232.8);
+  --color-blue-light-900: oklch(31.89% 0.123 233);
+  --color-blue-light-950: oklch(21.48% 0.075 233.2);
+
+  --color-gray-dark: oklch(26.32% 0.011 262.31);
+
+  --color-orange-25: oklch(98.3% 0.009 69.2);
+  --color-orange-50: oklch(97.3% 0.025 69.1);
+  --color-orange-100: oklch(94.6% 0.057 68.9);
+  --color-orange-200: oklch(89.9% 0.106 68.7);
+  --color-orange-300: oklch(80.1% 0.176 68.5);
+  --color-orange-400: oklch(71.2% 0.221 68.4);
+  --color-orange-500: oklch(63.8% 0.241 68.2);
+  --color-orange-600: oklch(55.1% 0.242 68);
+  --color-orange-700: oklch(46.7% 0.218 68.3);
+  --color-orange-800: oklch(40.3% 0.181 68.5);
+  --color-orange-900: oklch(34.7% 0.152 68.8);
+  --color-orange-950: oklch(24.5% 0.103 69.3);
+
+  --color-success-25: oklch(98.7% 0.008 149.8);
+  --color-success-50: oklch(97.1% 0.026 149.7);
+  --color-success-100: oklch(93.2% 0.067 149.6);
+  --color-success-200: oklch(87.1% 0.119 149.5);
+  --color-success-300: oklch(77.5% 0.183 149.3);
+  --color-success-400: oklch(68.9% 0.229 149.2);
+  --color-success-500: oklch(60.6% 0.239 149.1);
+  --color-success-600: oklch(51.2% 0.221 149);
+  --color-success-700: oklch(43.3% 0.188 149.3);
+  --color-success-800: oklch(36.6% 0.156 149.6);
+  --color-success-900: oklch(31.4% 0.128 149.9);
+  --color-success-950: oklch(21.5% 0.079 150.3);
+
+  --color-error-25: oklch(98.5% 0.009 28.2);
+  --color-error-50: oklch(97.1% 0.025 28.1);
+  --color-error-100: oklch(94.1% 0.057 28);
+  --color-error-200: oklch(89.2% 0.108 27.9);
+  --color-error-300: oklch(79.6% 0.177 27.7);
+  --color-error-400: oklch(69.8% 0.226 27.6);
+  --color-error-500: oklch(60.3% 0.247 27.5);
+  --color-error-600: oklch(51.7% 0.243 27.3);
+  --color-error-700: oklch(43.9% 0.213 27.6);
+  --color-error-800: oklch(38% 0.181 27.8);
+  --color-error-900: oklch(33.1% 0.154 28.1);
+  --color-error-950: oklch(23.4% 0.104 28.5);
+
+  --color-warning-25: oklch(98.1% 0.007 83.2);
+  --color-warning-50: oklch(97.2% 0.021 83.1);
+  --color-warning-100: oklch(94.3% 0.059 82.9);
+  --color-warning-200: oklch(89.5% 0.117 82.7);
+  --color-warning-300: oklch(81.1% 0.184 82.5);
+  --color-warning-400: oklch(73.4% 0.222 82.3);
+  --color-warning-500: oklch(65.3% 0.239 82.2);
+  --color-warning-600: oklch(55.3% 0.225 82);
+  --color-warning-700: oklch(45.9% 0.198 82.2);
+  --color-warning-800: oklch(39.2% 0.166 82.4);
+  --color-warning-900: oklch(34.2% 0.142 82.7);
+  --color-warning-950: oklch(23.6% 0.094 83.2);
+
+  --color-theme-pink-500: oklch(61.2% 0.267 328.5);
+  --color-theme-pink-600: oklch(53.2% 0.245 328.3);
+
+  --color-theme-purple-500: oklch(66.8% 0.21 266.3);
+
+  --color-gray-dark: oklch(20.5% 0.02 259.3);
+  --color-gray-25: oklch(98.1% 0.003 257.5);
+  --color-gray-50: oklch(96.5% 0.006 257.3);
+  --color-gray-100: oklch(94.2% 0.011 257.1);
+  --color-gray-200: oklch(89.8% 0.021 256.8);
+  --color-gray-300: oklch(82.2% 0.036 256.4);
+  --color-gray-400: oklch(68.5% 0.048 256);
+  --color-gray-500: oklch(55.3% 0.044 255.7);
+  --color-gray-600: oklch(42.7% 0.039 255.4);
+  --color-gray-700: oklch(33.5% 0.032 255.1);
+  --color-gray-800: oklch(25.8% 0.026 254.9);
+  --color-gray-900: oklch(18.2% 0.02 254.7);
+  --color-gray-950: oklch(14.3% 0.016 254.5);
+
+  --color-brand-25: oklch(97.47% 0.0119 259.82);
+  --color-brand-50: oklch(96.24% 0.017766 261.338);
+  --color-brand-100: oklch(93.17% 0.032567 262.6961);
+  --color-brand-200: oklch(87.46% 0.061 264.64);
+  --color-brand-300: oklch(79.06% 0.1052 266.72);
+  --color-brand-400: oklch(68.82% 0.163368 270.4221);
+  --color-brand-500: oklch(56.8% 0.2369 270);
+  --color-brand-600: oklch(50.5% 0.2597 270.04);
+  --color-brand-700: oklch(44.77% 0.2436 269.55);
+  --color-brand-800: oklch(39.41% 0.1989 270.35);
+  --color-brand-900: oklch(35.85% 0.1494 272.36);
+  --color-brand-950: oklch(25.13% 0.0989 274.36);
+
+  --text-title-2xl: 72px;
+  --text-title-xl: 60px;
+  --text-title-lg: 48px;
+  --text-title-md: 36px;
+  --text-title-sm: 30px;
+  --text-theme-xl: 20px;
+  --text-theme-sm: 14px;
+  --text-theme-xs: 12px;
+
+  --shadow-theme-md: 0px 4px 8px -2px rgba(16, 24, 40, 0.1),
+    0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+  --shadow-theme-lg: 0px 12px 16px -4px rgba(16, 24, 40, 0.08),
+    0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+  --shadow-theme-sm: 0px 1px 3px 0px rgba(16, 24, 40, 0.1),
+    0px 1px 2px 0px rgba(16, 24, 40, 0.06);
+  --shadow-theme-xs: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  --shadow-theme-xl: 0px 20px 24px -4px rgba(16, 24, 40, 0.08),
+    0px 8px 8px -4px rgba(16, 24, 40, 0.03);
+  --shadow-datepicker: -5px 0 0 #262d3c, 5px 0 0 #262d3c;
+  --shadow-focus-ring: 0px 0px 0px 4px rgba(70, 95, 255, 0.12);
+  --shadow-slider-navigation: 0px 1px 2px 0px rgba(16, 24, 40, 0.1),
+    0px 1px 3px 0px rgba(16, 24, 40, 0.1);
+  --shadow-tooltip: 0px 4px 6px -2px rgba(16, 24, 40, 0.05),
+    -8px 0px 20px 8px rgba(16, 24, 40, 0.05);
+
+  --z-999999: 999999;
+  --z-99999: 99999;
+  --z-9999: 9999;
+  --z-999: 999;
+  --z-99: 99;
+  --z-9: 9;
+  --z-1: 1;
+
+  --spacing-4\.5: 1.125rem;
+  --spacing-5\.5: 1.375rem;
+  --spacing-6\.5: 1.625rem;
+  --spacing-7\.5: 1.875rem;
+  --spacing-8\.5: 2.125rem;
+  --spacing-9\.5: 2.375rem;
+  --spacing-10\.5: 2.625rem;
+  --spacing-11\.5: 2.875rem;
+  --spacing-12\.5: 3.125rem;
+  --spacing-13: 3.25rem;
+  --spacing-13\.5: 3.375rem;
+  --spacing-14\.5: 3.625rem;
+  --spacing-15: 3.75rem;
+}
+
+@layer components {
+  .menu-item {
+    @apply relative flex items-center w-full gap-3 px-3 py-2 font-medium rounded-lg text-theme-sm;
+  }
+  .menu-item-active {
+    @apply bg-brand-50 text-brand-500 dark:bg-brand-500/[0.12] dark:text-brand-400;
+  }
+  .menu-item-inactive {
+    @apply text-gray-700 hover:bg-gray-100 group-hover:text-gray-700 dark:text-gray-300 dark:hover:bg-white/5 dark:hover:text-gray-300;
+  }
+  .menu-item-icon {
+    @apply text-gray-500 group-hover:text-gray-700 dark:text-gray-400;
+  }
+  .menu-item-icon-active {
+    @apply text-brand-500 dark:text-brand-400;
+  }
+  .menu-item-icon-size svg {
+    @apply size-6;
+  }
+  .menu-item-icon-inactive {
+    @apply text-gray-500 group-hover:text-gray-700 dark:text-gray-400 dark:group-hover:text-gray-300;
+  }
+
+  .menu-item-arrow {
+    @apply relative;
+  }
+  .menu-item-arrow-active {
+    @apply rotate-180 text-brand-500 dark:text-brand-400;
+  }
+  .menu-item-arrow-inactive {
+    @apply text-gray-500 group-hover:text-gray-700 dark:text-gray-400 dark:group-hover:text-gray-300;
+  }
+
+  .menu-dropdown-item {
+    @apply relative flex items-center gap-3 rounded-lg px-3 py-2.5 text-theme-sm font-medium;
+  }
+  .menu-dropdown-item-active {
+    @apply bg-brand-50 text-brand-500 dark:bg-brand-500/[0.12] dark:text-brand-400;
+  }
+  .menu-dropdown-item-inactive {
+    @apply text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-white/5;
+  }
+
+  .menu-dropdown-badge {
+    @apply block rounded-full px-2.5 py-0.5 text-xs font-medium uppercase text-brand-500 dark:text-brand-400;
+  }
+  .menu-dropdown-badge-active {
+    @apply bg-brand-100 dark:bg-brand-500/20;
+  }
+  .menu-dropdown-badge-inactive {
+    @apply bg-brand-50 group-hover:bg-brand-100 dark:bg-brand-500/15 dark:group-hover:bg-brand-500/20;
+  }
+}
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    @apply size-1.5;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-gray-200 rounded-full dark:bg-gray-700;
+  }
+  /* For Remove Date Icon */
+  input[type="date"]::-webkit-inner-spin-button,
+  input[type="time"]::-webkit-inner-spin-button,
+  input[type="date"]::-webkit-calendar-picker-indicator,
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+}

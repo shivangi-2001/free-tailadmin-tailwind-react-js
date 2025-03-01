@@ -1,0 +1,64 @@
+.fc-addEventButton-button {
+    border-radius: var(--rounded-lg);
+    padding: var(--px-4) var(--py-2.5);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    background-color: var(--bg-brand-500);
+    color: var(--text-white);
+    border: var(--border-0);
+    transition: var(--transition-all);
+    cursor: var(--pointer);
+}
+
+.taskCheckbox:checked ~ .box span {
+    opacity: 1;
+    background-color: var(--bg-brand-500);
+}
+
+.taskCheckbox:checked ~ p {
+    color: var(--text-gray-400);
+    line-through: var(--line-through);
+}
+
+.taskCheckbox:checked ~ .box {
+    border-color: var(--border-brand-500);
+    background-color: var(--bg-brand-500);
+    @variant dark{
+        border-color: var(--border-brand-500);
+    }
+}
+
+.task {
+  transition: all 0.2s ease; 
+}
+
+.task {
+  border-radius: 0.75rem;
+  box-shadow: 0px 1px 3px 0px rgba(16, 24, 40, 0.1),
+    0px 1px 2px 0px rgba(16, 24, 40, 0.06);
+  opacity: 0.8;
+  cursor: var(--grabbing);
+}
+
+.custom-calendar .fc-h-event {
+  background-color: transparent;
+  border: none;
+  color: black;
+}
+
+.fc.fc-media-screen {
+  min-height: var(--min-h-screen);
+}
+
+.simplebar-scrollbar:before {
+  background-color: var(--bg-gray-200);
+  border-radius: var(--rounded-full);
+  opacity: 1;
+  @variant dark {
+    background-color: var(--bg-gray-700);
+  }
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+  opacity: 1;
+}
